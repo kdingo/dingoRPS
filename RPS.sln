@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPS", "RPS\RPS.csproj", "{CC0413D3-73D7-467B-A97A-F96A99D145F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSTest", "RPSTest\RPSTest.csproj", "{4E8EE5B6-ED19-4A64-B802-B0DE981361F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC0413D3-73D7-467B-A97A-F96A99D145F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC0413D3-73D7-467B-A97A-F96A99D145F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC0413D3-73D7-467B-A97A-F96A99D145F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC0413D3-73D7-467B-A97A-F96A99D145F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E8EE5B6-ED19-4A64-B802-B0DE981361F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8EE5B6-ED19-4A64-B802-B0DE981361F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8EE5B6-ED19-4A64-B802-B0DE981361F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8EE5B6-ED19-4A64-B802-B0DE981361F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
