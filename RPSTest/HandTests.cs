@@ -4,30 +4,31 @@ using RPS;
 namespace RPSTest {
     [TestClass]
     public class HandTests {
-        readonly string[] expectedHand = { "ROCK", "PAPER", "SCISSORS" };
 
         [TestMethod]
         public void GenerateHandTest() {
             //Arrange
+            string[] validHand = { "ROCK", "PAPER", "SCISSORS" };
             var newHand = new Hand();
 
             //Act
             var actualHand = newHand.CurrentHand;
 
             //Assert
-            CollectionAssert.Contains(expectedHand, actualHand);
+            CollectionAssert.Contains(validHand, actualHand);
         }
 
         [TestMethod]
         public void ConstructorHandTest() {
             //Arrange
+            var expectedHand = "ROCK";
             var newHand = new Hand("Rock");
 
             //Act
             var actualHand = newHand.CurrentHand;
 
             //Assert
-            CollectionAssert.Contains(expectedHand, actualHand);
+            Assert.AreEqual(expectedHand, actualHand);
         }
 
         [TestMethod]
