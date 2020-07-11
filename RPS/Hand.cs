@@ -5,9 +5,13 @@ using System.Linq;
 namespace RPS {
     public class Hand {
         /// <summary>
-        /// An array of valid hand strings.
+        /// All valid hand strings.
         /// </summary>
-        private readonly string[] allHands = { "ROCK", "PAPER", "SCISSORS" };
+        const string R = "ROCK";
+        const string P = "PAPER";
+        const string S = "SCISSORS";
+
+        private readonly string[] allHands = { R, P, S };
 
         private string currentHand;
 
@@ -48,11 +52,11 @@ namespace RPS {
             int choiceint = randgen.Next(0, 3);
             switch (choiceint) {
                 case 0:
-                    return "ROCK";
+                    return R;
                 case 1:
-                    return "PAPER";
+                    return P;
                 case 2:
-                    return "SCISSORS";
+                    return S;
                 default:
                     return "default";
             }
@@ -71,27 +75,27 @@ namespace RPS {
             string compareHand = opponentHand.CurrentHand;
 
             switch (compareHand) {
-                case "ROCK":
-                    if (CurrentHand.Equals("SCISSORS")) {
+                case R:
+                    if (CurrentHand.Equals(S)) {
                         return 0;
                     }
-                    else if (CurrentHand.Equals("PAPER")) {
+                    else if (CurrentHand.Equals(P)) {
                         return 1;
                     }
                     else return -1;
-                case "PAPER":
-                    if (CurrentHand.Equals("ROCK")) {
+                case P:
+                    if (CurrentHand.Equals(R)) {
                         return 0;
                     }
-                    else if (CurrentHand.Equals("SCISSORS")) {
+                    else if (CurrentHand.Equals(S)) {
                         return 1;
                     }
                     else return -1;
-                case "SCISSORS":
-                    if (CurrentHand.Equals("PAPER")) {
+                case S:
+                    if (CurrentHand.Equals(P)) {
                         return 0;
                     }
-                    else if (CurrentHand.Equals("ROCK")) {
+                    else if (CurrentHand.Equals(R)) {
                         return 1;
                     }
                     else return -1;
