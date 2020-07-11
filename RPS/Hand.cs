@@ -4,13 +4,25 @@ using System.Linq;
 
 namespace RPS {
     public class Hand {
+        /// <summary>
+        /// An array of valid hand strings.
+        /// </summary>
         private readonly string[] allHands = { "ROCK", "PAPER", "SCISSORS" };
+
         private string currentHand;
 
+        /// <summary>
+        /// Default constructor. Invoking with no parameters generates a hand by random.
+        /// </summary>
         public Hand() {
             CurrentHand = GenerateHand();
         }
 
+        /// <summary>
+        /// Constructor. Provide a string of your choice of hand. Must be valid or
+        /// a valid one is generated.
+        /// </summary>
+        /// <param name="choiceHand"></param>
         public Hand(string choiceHand) {
             CurrentHand = choiceHand.ToUpper().Trim();
             if (!allHands.Contains(CurrentHand)) {
@@ -27,9 +39,13 @@ namespace RPS {
             }
         }
 
+        /// <summary>
+        /// Randomly generates a valid hand.
+        /// </summary>
+        /// <returns>A string of a valid hand.</returns>
         private string GenerateHand() {
             Random randgen = new Random();
-            int choiceint = randgen.Next(0, 2);
+            int choiceint = randgen.Next(0, 3);
             switch (choiceint) {
                 case 0:
                     return "ROCK";
@@ -42,11 +58,16 @@ namespace RPS {
             }
         }
 
+        /// <summary>
+        /// Compares this hand against another hand. Returns an int representing
+        /// the result of the comparison.
+        /// 1 = this hand is a Winner
+        /// 0 = this hand loses
+        /// -1 = draw
+        /// </summary>
+        /// <param name="opponentHand"></param>
+        /// <returns>An int of the comparison result.</returns>
         public int IsWinner(Hand opponentHand) {
-            //1 = this hand is a Winner
-            //0 = this hand loses
-            //-1 = draw
-
             string compareHand = opponentHand.CurrentHand;
 
             switch (compareHand) {
