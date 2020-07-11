@@ -13,7 +13,7 @@ namespace RPS {
                 Console.Write("\nChoose a hand: ");
                 string readChoice = Console.ReadLine();
 
-                if (readChoice.Equals("quit")) {
+                if (readChoice.ToLower().Equals("quit")) {
                     break;
                 }
 

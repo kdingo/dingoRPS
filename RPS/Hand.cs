@@ -4,13 +4,13 @@ using System.Linq;
 
 namespace RPS {
     public class Hand {
+        /// <summary>
+        /// All valid hand strings.
+        /// </summary>
         const string R = "ROCK";
         const string P = "PAPER";
         const string S = "SCISSORS";
 
-        /// <summary>
-        /// An array of valid hand strings.
-        /// </summary>
         private readonly string[] allHands = { R, P, S };
 
         private string currentHand;
